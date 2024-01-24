@@ -1,0 +1,348 @@
+/*---------- Fonts -----------*/
+
+/*---------- Variables -----------*/
+
+:root {
+  /* colors */
+  --clr-primary-blue: hsl(215, 39%, 20%);
+  --clr-primary-blue-light-1: #354559;
+  --clr-primary-blue-dark-1: hsl(215, 39%, 11%);
+  --clr-primary-blue-dark-2: hsl(220, 38%, 3%);
+  --clr-primary-gold: hsl(36, 39%, 74%);
+  --clr-primary-gold-light-1: hsl(40, 37%, 97%);
+  --clr-primary-gold-light-2: hsl(35, 39%, 85%);
+  --clr-white: #fff;
+  --clr-black: #000;
+  --transition: all 0.3s linear;
+  --radius: 14px;
+}
+
+/*---------- Global Styles -----------*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+}
+
+/*---------- Global Classes -----------*/
+.wrapper {
+}
+
+/*---------- Header -----------*/
+.header {
+  position: relative;
+  background: linear-gradient(
+      180deg,
+      rgba(2, 9, 26, 0.35) 15.1%,
+      rgba(20, 32, 64, 0) 96.35%
+    ),
+    url(../assets/bg.jpg) center/cover no-repeat;
+}
+
+/*---------- Navbar -----------*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 5rem;
+}
+
+.nav-logo {
+}
+
+.nav-logo img {
+  width: 76px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  color: var(--clr-primary-gold-light-1);
+}
+
+/*---------- Title -----------*/
+.title {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title-center {
+  margin-top: 3rem;
+}
+
+.title-heading {
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.title-heading h1 {
+  font-size: 5rem;
+  color: var(--clr-primary-gold-light-1);
+  padding-right: 1rem;
+  text-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.25);
+}
+
+.title-logo {
+  width: 46px;
+  height: 55px;
+}
+
+.title-btn {
+  margin-top: 2rem;
+  margin-right: 2.5rem;
+  padding: 1.25rem 5rem;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  background: var(--clr-primary-blue);
+  color: var(--clr-primary-gold-light-1);
+  box-shadow: 0px 6px 5.9px 0px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.title-btn:hover {
+  background: transparent;
+  color: var(--clr-primary-blue);
+  border: 2px solid var(--clr-primary-blue);
+}
+
+/*---------- About -----------*/
+.section {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 5rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin: 6rem 0;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+  color: var(--clr-primary-blue);
+  margin-bottom: 0.5rem;
+  /* font-weight: 500; */
+}
+
+.underline {
+  height: 0.125rem;
+  width: 8rem;
+  background-color: var(--clr-primary-gold);
+  margin: 0 auto;
+}
+
+.section-center {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-info {
+  width: 55%;
+  margin-right: 4rem;
+}
+
+.section-info h3 {
+  margin-bottom: 3rem;
+  color: var(--clr-primary-gold);
+  font-size: 1.5rem;
+  text-transform: none;
+}
+
+.section-info p {
+  line-height: 1.5;
+  color: var(--clr-primary-blue-dark-1);
+}
+
+/*---------- Numbers -----------*/
+.numbers-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 7rem 0;
+}
+
+.numbers-card {
+  flex: 0 0 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--clr-primary-gold-light-2);
+  background: rgba(243, 243, 243, 0.3);
+  box-shadow: 1px 50px 97.3px 0px rgba(155, 155, 155, 0.25);
+  padding: 2.5rem 2rem;
+  border-radius: 41px;
+}
+
+.numbers-logo {
+  height: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.numbers-title {
+  font-size: 3.75rem;
+  color: var(--clr-primary-blue-dark-1);
+}
+
+.numbers-info {
+  font-size: 1.25rem;
+  color: var(--clr-primary-gold);
+  font-weight: 300;
+  text-align: center;
+}
+
+/*---------- Footer -----------*/
+
+/*---------- Media Queries ------------*/
+@media screen and (max-width: 1024px) {
+  /*---------- About -----------*/
+  .section-info {
+    width: 85%;
+    margin-right: 3rem;
+  }
+
+  .section-info h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  /*---------- Numbers -----------*/
+  .numbers-card {
+    flex: 0 0 24%;
+    padding: 2rem 2rem;
+    border-radius: 25px;
+  }
+
+  .numbers-title {
+    font-size: 2.75rem;
+  }
+
+  .numbers-info {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  /*---------- Title -----------*/
+  .title-heading h1 {
+    font-size: 3rem;
+  }
+
+  .title-logo {
+    width: 30px;
+    height: 32px;
+  }
+
+  .title-btn {
+    margin-top: 1.2rem;
+    margin-right: 0.5rem;
+    padding: 1.25rem 2.5rem;
+    border: 1px solid transparent;
+    font-size: 0.85rem;
+  }
+
+  .section {
+    padding: 0 3rem;
+  }
+
+  /*---------- About -----------*/
+  .section {
+    padding: 0 3rem;
+  }
+
+  .section-heading {
+    margin: 6rem 0 3rem;
+  }
+
+  .section-center {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  .section-info {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+    color: var(--clr-primary-blue);
+    margin-bottom: 0.5rem;
+  }
+
+  .underline {
+    height: 0.08rem;
+    width: 6rem;
+  }
+
+  .section-info h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .section-info p {
+    line-height: 1.5;
+    color: var(--clr-primary-blue-dark-1);
+  }
+
+  /* .section-card {
+    width: 100%;
+    max-width: 200px;
+  } */
+
+  /*---------- Numbers -----------*/
+  .numbers-container {
+    margin: 5rem 0;
+  }
+  .numbers-card {
+    flex: 0 0 47%;
+    padding: 1.5remrem 1.5rem;
+    border-radius: 25px;
+    margin-bottom: 2rem;
+  }
+}
