@@ -27,6 +27,7 @@
 }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 ul {
@@ -50,6 +51,13 @@ h3 {
 
 /*---------- Global Classes -----------*/
 .wrapper {
+}
+
+.section {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 5rem;
 }
 
 /*---------- Header -----------*/
@@ -145,12 +153,6 @@ h3 {
 }
 
 /*---------- About -----------*/
-.section {
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 5rem;
-}
 
 .section-heading {
   text-align: center;
@@ -232,7 +234,165 @@ h3 {
   text-align: center;
 }
 
+/*---------- Slides -----------*/
+.section-slides {
+  margin: 5rem 0;
+  display: flex;
+  background: grey;
+}
+
+.single-slide {
+  height: 50vh;
+  border: 1px solid var(--clr-white);
+  flex: 1;
+  background-size: cover;
+  background-position: right;
+}
+
+.single-slide:first-of-type {
+  border-left: none;
+}
+
+.single-slide:last-of-type {
+  border-right: none;
+}
+
+.slide-one {
+  background-image: url(../assets/slides/1.png);
+}
+
+.slide-two {
+  background-image: url(../assets/slides/2.jpeg);
+}
+.slide-three {
+  background-image: url(../assets/slides/3.jpeg);
+}
+.slide-four {
+  background-image: url(../assets/slides/4.jpeg);
+}
+.slide-five {
+  background-image: url(../assets/slides/5.jpeg);
+}
+.slide-six {
+  background-image: url(../assets/slides/6.jpeg);
+}
+.slide-seven {
+  background-image: url(../assets/slides/7.jpeg);
+}
+
+/*---------- Prices -----------*/
+.section-prices {
+  background: var(--clr-primary-blue);
+  padding: 7rem 0;
+}
+
+.section-prices .section-heading {
+  margin: 0 0 2.5rem;
+}
+
+.section-prices h2 {
+  color: var(--clr-primary-gold-light-1);
+}
+
+.prices-info {
+  text-align: center;
+  max-width: 38rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  color: var(--clr-primary-gold-light-1);
+  font-size: 1.1rem;
+}
+
+.prices-categories {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50rem;
+  margin: 7rem auto 0;
+  text-align: center;
+}
+
+.prices-category h4 {
+  color: var(--clr-primary-gold);
+  font-size: 1.375rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.prices-category p {
+  color: var(--clr-primary-gold-light-1);
+  font-size: 2rem;
+}
+
+/*---------- Contact -----------*/
+.contact-wrapper {
+  background: url(../assets/mountains-bg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.section-contact {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10rem;
+  padding-bottom: 1rem;
+  color: var(--clr-primary-blue-dark-1);
+}
+
+.contact-container h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.contact-logo {
+  display: flex;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.contact-logo img {
+  width: 18px;
+  height: 22px;
+  margin-left: 0.5rem;
+}
+
+.contact-email {
+  margin-top: 2rem;
+}
+
+.contact-container .contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+
+.contact-links .nav-link {
+  font-size: 1rem;
+  color: var(--clr-primary-blue-dark-1);
+}
 /*---------- Footer -----------*/
+.footer {
+  text-align: center;
+  border-top: 1px solid var(--clr-primary-gold);
+  line-height: 1.5;
+  padding: 1rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.footer-rights {
+  text-transform: capitalize;
+  color: var(--clr-primary-blue);
+  font-size: 0.875rem;
+}
+
+.footer span {
+  font-style: italic;
+}
 
 /*---------- Media Queries ------------*/
 @media screen and (max-width: 1024px) {
@@ -261,9 +421,30 @@ h3 {
   .numbers-info {
     font-size: 1rem;
   }
+
+  /*---------- Prices -----------*/
+  .section-prices {
+    padding: 7rem 0;
+  }
+
+  .section-prices .section-heading {
+    margin: 0 0 2.5rem;
+  }
+
+  .prices-info {
+    font-size: 1rem;
+  }
+
+  .prices-category p {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 776px) {
+  .section {
+    padding: 0 3rem;
+  }
+
   /*---------- Title -----------*/
   .title-heading h1 {
     font-size: 3rem;
@@ -282,15 +463,7 @@ h3 {
     font-size: 0.85rem;
   }
 
-  .section {
-    padding: 0 3rem;
-  }
-
   /*---------- About -----------*/
-  .section {
-    padding: 0 3rem;
-  }
-
   .section-heading {
     margin: 6rem 0 3rem;
   }
@@ -311,7 +484,6 @@ h3 {
 
   .section-heading h2 {
     font-size: 2rem;
-    color: var(--clr-primary-blue);
     margin-bottom: 0.5rem;
   }
 
@@ -330,11 +502,6 @@ h3 {
     color: var(--clr-primary-blue-dark-1);
   }
 
-  /* .section-card {
-    width: 100%;
-    max-width: 200px;
-  } */
-
   /*---------- Numbers -----------*/
   .numbers-container {
     margin: 5rem 0;
@@ -344,5 +511,41 @@ h3 {
     padding: 1.5remrem 1.5rem;
     border-radius: 25px;
     margin-bottom: 2rem;
+  }
+
+  /*---------- Slides -----------*/
+  .section-slides {
+    margin: 10rem 0;
+    flex-direction: column;
+    height: 70vh;
+  }
+
+  .slide-five,
+  .slide-seven {
+    display: none;
+  }
+
+  /*---------- Prices -----------*/
+  .section-prices {
+    padding: 5rem 0;
+  }
+
+  .section-prices .section-heading {
+    margin: 0 0 1.5rem;
+  }
+
+  .prices-categories {
+    justify-content: space-between;
+    margin-top: 5rem;
+  }
+
+  .prices-category p {
+    font-size: 1.2rem;
+  }
+
+  /*---------- Contact -----------*/
+  .section-contact {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
   }
 }
