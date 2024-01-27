@@ -258,26 +258,26 @@ h3 {
 }
 
 .slide-one {
-  background-image: url(../assets/slides/1.png);
+  background-image: url(../assets/slides/1.jpg);
 }
 
 .slide-two {
-  background-image: url(../assets/slides/2.jpeg);
+  background-image: url(../assets/slides/2.jpg);
 }
 .slide-three {
-  background-image: url(../assets/slides/3.jpeg);
+  background-image: url(../assets/slides/3.jpg);
 }
 .slide-four {
-  background-image: url(../assets/slides/4.jpeg);
+  background-image: url(../assets/slides/4.jpg);
 }
 .slide-five {
-  background-image: url(../assets/slides/5.jpeg);
+  background-image: url(../assets/slides/5.jpg);
 }
 .slide-six {
-  background-image: url(../assets/slides/6.jpeg);
+  background-image: url(../assets/slides/6.jpg);
 }
 .slide-seven {
-  background-image: url(../assets/slides/7.jpeg);
+  background-image: url(../assets/slides/7.jpg);
 }
 
 /*---------- Prices -----------*/
@@ -325,7 +325,7 @@ h3 {
 
 /*---------- Contact -----------*/
 .contact-wrapper {
-  background: url(../assets/mountains-bg.png);
+  background: url(../assets/mountains.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -382,11 +382,11 @@ h3 {
   line-height: 1.5;
   padding: 1rem 0.5rem;
   font-size: 0.75rem;
+  color: var(--clr-primary-blue);
 }
 
 .footer-rights {
   text-transform: capitalize;
-  color: var(--clr-primary-blue);
   font-size: 0.875rem;
 }
 
