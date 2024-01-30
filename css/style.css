@@ -323,6 +323,69 @@ h3 {
   font-size: 2rem;
 }
 
+/*---------- Questions -----------*/
+.question-container {
+  max-width: 60rem;
+  margin: 0 auto 4rem;
+}
+
+.question {
+  margin-bottom: 2rem;
+}
+
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--clr-primary-gold);
+  padding: 0rem 0.25rem 0.75rem 0.75rem;
+}
+
+.question-title p {
+  color: var(--clr-primary-blue-dark-1);
+  font-size: 1.25rem;
+  padding-right: 1rem;
+}
+
+.question-btn {
+  border: none;
+  background: none;
+  font-size: 2rem;
+  color: var(--clr-primary-gold);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.question-text {
+  padding: 2rem 0.75rem 4rem 0.75rem;
+  background: var(--clr-primary-gold-light-1);
+  line-height: 1.5;
+}
+
+/* hide text */
+.question-text {
+  display: none;
+}
+
+.show-text .question-text {
+  display: block;
+}
+
+.minus-icon {
+  display: none;
+}
+
+.show-text .minus-icon {
+  display: inline;
+}
+
+.show-text .plus-icon {
+  display: none;
+}
+
 /*---------- Contact -----------*/
 .contact-wrapper {
   background: url(../assets/mountains.jpg);
@@ -541,6 +604,23 @@ h3 {
 
   .prices-category p {
     font-size: 1.2rem;
+  }
+
+  /*---------- Questions -----------*/
+  .question-title {
+    padding: 0rem 0.25rem 0.2rem 0.75rem;
+  }
+
+  .question-title p {
+    font-size: 1rem;
+  }
+
+  .question-btn {
+    font-size: 1.5rem;
+  }
+
+  .question-text {
+    font-size: 0.875rem;
   }
 
   /*---------- Contact -----------*/
