@@ -27,7 +27,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lora', serif;
 }
 
 ul {
@@ -95,17 +95,13 @@ h3 {
 }
 
 .nav-link {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   text-transform: capitalize;
   color: var(--clr-primary-gold-light-1);
+  letter-spacing: 1px;
 }
 
-/*-----------change!!!!!!!!!!!!!!!!!!--------*/
-.section-areas {
-  display: none;
-}
-
-/*---- */
+/*----------- Navbar on click ------------*/
 .active {
   background-color: var(--clr-primary-blue-dark-1);
 }
@@ -116,11 +112,11 @@ h3 {
 
 /*---------- Hamburger button -----------*/
 .nav-link {
-  transition: 0.5s ease;
+  transition: var(--transition);
 }
 
 .nav-link:hover {
-  color: #8e8e8e;
+  color: var(--clr-primary-gold);
 }
 
 .hamburger-btn {
@@ -185,11 +181,12 @@ h3 {
   font-size: 1rem;
   text-transform: uppercase;
   cursor: pointer;
+  transition: var(--transition);
 }
 
 .title-btn:hover {
   background: transparent;
-  color: var(--clr-primary-blue);
+  color: var(--clr-primary-blue-dark-1);
   border: 2px solid var(--clr-primary-blue);
 }
 
@@ -197,14 +194,14 @@ h3 {
 
 .section-heading {
   text-align: center;
-  margin: 6rem 0;
+  margin: 7rem 0 5rem;
 }
 
 .section-heading h2 {
   font-size: 2.5rem;
   color: var(--clr-primary-blue);
   margin-bottom: 0.5rem;
-  /* font-weight: 500; */
+  font-weight: 600;
 }
 
 .underline {
@@ -231,10 +228,12 @@ h3 {
   color: var(--clr-primary-gold);
   font-size: 1.5rem;
   text-transform: none;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .section-info p {
-  line-height: 1.5;
+  line-height: 1.7;
   color: var(--clr-primary-blue-dark-1);
 }
 
@@ -247,15 +246,15 @@ h3 {
 }
 
 .numbers-card {
-  flex: 0 0 23%;
+  flex: 0 0 23.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid var(--clr-primary-gold-light-2);
   background: rgba(243, 243, 243, 0.3);
   box-shadow: 1px 50px 97.3px 0px rgba(155, 155, 155, 0.25);
-  padding: 2.5rem 2rem;
-  border-radius: 41px;
+  padding: 2.5rem 1rem;
+  border-radius: 2.2rem;
 }
 
 .numbers-logo {
@@ -265,19 +264,20 @@ h3 {
 
 .numbers-title {
   font-size: 3.75rem;
+  letter-spacing: 3px;
   color: var(--clr-primary-blue-dark-1);
 }
 
 .numbers-info {
   font-size: 1.25rem;
   color: var(--clr-primary-gold);
-  font-weight: 300;
+  font-weight: 600;
   text-align: center;
 }
 
 /*---------- Slides -----------*/
 .section-slides {
-  margin: 5rem 0;
+  margin: 7rem 0;
   display: flex;
   background: grey;
 }
@@ -322,15 +322,10 @@ h3 {
 }
 
 /*---------- Ski areas -----------*/
-
 .resorts-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 7rem;
-}
-
-.section-areas .section-heading {
-  margin-bottom: 4rem;
 }
 
 .areas-btn {
@@ -351,20 +346,31 @@ h3 {
   text-transform: capitalize;
   font-weight: 600;
   cursor: pointer;
+  color: var(--clr-primary-blue-dark-1);
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  background-color: var(--clr-primary-gold-light-2);
+  color: var(--clr-primary-blue-dark-2);
 }
 
 .single-resort {
-  /* width: 24%; */
-  max-width: 280px;
-  margin-right: 1rem;
+  flex: 0 0 23.5%;
   border: 1px solid var(--clr-primary-gold);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   box-shadow: 0px 50px 97px 0px rgba(155, 155, 155, 0.39);
+  transition: var(--transition);
+}
+
+.single-resort:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 50px 97px 0px rgba(155, 155, 155, 0.5);
 }
 
 .resort-img {
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-top-right-radius: 1.25rem;
+  border-top-left-radius: 1.25rem;
 }
 
 .resort-info {
@@ -374,19 +380,20 @@ h3 {
 }
 
 .resort-area {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
 .resort-info h4 {
   font-size: 1.25rem;
-  font-weight: 100;
-  padding-top: 0.5rem;
-  padding-bottom: 2.5rem;
+  font-weight: 400;
+  padding-top: 0.7rem;
+  padding-bottom: 2rem;
 }
 
-.resort-date {
-}
+/* .resort-date {
+  font-size: 1rem;
+} */
 
 .see-more {
   width: 100%;
@@ -394,7 +401,7 @@ h3 {
   background: none;
   padding: 1.25rem 0;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.125rem;
   cursor: pointer;
 }
 
@@ -405,7 +412,7 @@ h3 {
 }
 
 .section-prices .section-heading {
-  margin: 0 0 2.5rem;
+  margin: 0 0 3rem;
 }
 
 .section-prices h2 {
@@ -414,11 +421,11 @@ h3 {
 
 .prices-info {
   text-align: center;
-  max-width: 38rem;
-  line-height: 1.5;
+  max-width: 40rem;
+  line-height: 1.7;
   margin: 0 auto;
   color: var(--clr-primary-gold-light-1);
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 .prices-categories {
@@ -433,6 +440,8 @@ h3 {
   color: var(--clr-primary-gold);
   font-size: 1.375rem;
   text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
@@ -454,9 +463,8 @@ h3 {
 .question-title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid var(--clr-primary-gold);
-  padding: 0rem 0.25rem 0.75rem 0.75rem;
+  padding: 1rem 0.25rem 0.5rem 0.75rem;
 }
 
 .question-title p {
@@ -473,13 +481,14 @@ h3 {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
 .question-text {
   padding: 2rem 0.75rem 4rem 0.75rem;
   background: var(--clr-primary-gold-light-1);
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 /* hide text */
@@ -514,7 +523,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   padding-top: 10rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   color: var(--clr-primary-blue-dark-1);
 }
 
@@ -524,7 +533,6 @@ h3 {
 }
 
 .contact-info {
-  font-size: 0.9rem;
   line-height: 1.5rem;
 }
 
@@ -548,13 +556,20 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  cursor: pointer;
 }
 
 .contact-links .nav-link {
   font-size: 1rem;
+  font-weight: 600;
   color: var(--clr-primary-blue-dark-1);
+  cursor: pointer;
+  transition: var(--transition);
 }
+
+.contact-links .nav-link:hover {
+  color: var(--clr-primary-gold);
+}
+
 /*---------- Footer -----------*/
 .footer {
   text-align: center;
@@ -568,10 +583,12 @@ h3 {
 .footer-rights {
   text-transform: capitalize;
   font-size: 0.875rem;
+  letter-spacing: 1px;
 }
 
 .footer span {
   font-style: italic;
+  font-weight: 600;
 }
 
 /*---------- Media Queries ------------*/
@@ -627,6 +644,10 @@ h3 {
 
   .nav-logo img {
     width: 50px;
+  }
+
+  .nav-link:hover {
+    color: var(--clr-primary-blue);
   }
 
   /*---------- Title -----------*/
