@@ -57,7 +57,7 @@ h3 {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 5rem;
+  padding: 0 3rem;
 }
 
 /*---------- Header -----------*/
@@ -91,7 +91,7 @@ h3 {
 
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 60px;
 }
 
 .nav-link {
@@ -326,6 +326,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 7rem;
+  flex-wrap: wrap;
 }
 
 .areas-btn {
@@ -361,6 +362,7 @@ h3 {
   border-radius: 1.25rem;
   box-shadow: 0px 50px 97px 0px rgba(155, 155, 155, 0.39);
   transition: var(--transition);
+  margin-bottom: 1rem;
 }
 
 .single-resort:hover {
@@ -390,10 +392,6 @@ h3 {
   padding-top: 0.7rem;
   padding-bottom: 2rem;
 }
-
-/* .resort-date {
-  font-size: 1rem;
-} */
 
 .see-more {
   width: 100%;
@@ -592,7 +590,13 @@ h3 {
 }
 
 /*---------- Media Queries ------------*/
+
 @media screen and (max-width: 1024px) {
+  /*---------- Header -----------*/
+  .title-heading h1 {
+    font-size: 4rem;
+  }
+
   /*---------- About -----------*/
   .section-info {
     width: 85%;
@@ -601,13 +605,12 @@ h3 {
 
   .section-info h3 {
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;
   }
 
   /*---------- Numbers -----------*/
   .numbers-card {
     flex: 0 0 24%;
-    padding: 2rem 2rem;
+    padding: 2rem 1rem;
     border-radius: 25px;
   }
 
@@ -617,6 +620,14 @@ h3 {
 
   .numbers-info {
     font-size: 1rem;
+  }
+
+  /*---------- Ski areas -----------*/
+  .resorts-container {
+    justify-content: space-between; /*-----need to change that --------*/
+  }
+  .single-resort {
+    flex: 0 0 32%;
   }
 
   /*---------- Prices -----------*/
@@ -632,25 +643,26 @@ h3 {
     font-size: 1rem;
   }
 
+  .prices-categories {
+    max-width: 45rem;
+  }
+
   .prices-category p {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 776px) {
-  .section {
-    padding: 0 3rem;
+  /*---------- Navbar -----------*/
+  .navbar {
+    padding: 2rem 1.5rem;
   }
 
   .nav-logo img {
     width: 50px;
   }
 
-  .nav-link:hover {
-    color: var(--clr-primary-blue);
-  }
-
-  /*---------- Title -----------*/
+  /*---------- Hambruger btn -----------*/
   .hamburger-btn {
     display: block;
   }
@@ -684,25 +696,33 @@ h3 {
     padding-top: 2rem;
   }
 
+  .nav-links.open {
+    right: 0;
+  }
+
   .nav-item {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem;
     transition: var(--transition);
+  }
+
+  .nav-item:hover {
+    padding-left: 2rem;
+    background: var(--clr-primary-gold);
+    color: var(--clr-primary-blue);
   }
 
   .nav-link {
     color: var(--clr-white);
   }
 
-  .nav-item:hover {
-    padding-left: 2.5rem;
-    background: var(--clr-primary-gold);
+  .nav-link:hover {
     color: var(--clr-primary-blue);
   }
 
-  .nav-links.open {
-    right: 0;
+  /*---------- Title -----------*/
+  .title-center {
+    margin-top: 1rem;
   }
-
   .title-heading h1 {
     font-size: 3rem;
   }
@@ -715,48 +735,39 @@ h3 {
   .title-btn {
     margin-top: 1.2rem;
     margin-right: 0.5rem;
-    padding: 1.25rem 2.5rem;
+    padding: 1rem 3.5rem;
     border: 1px solid transparent;
     font-size: 0.85rem;
   }
 
   /*---------- About -----------*/
   .section-heading {
-    margin: 6rem 0 3rem;
+    margin: 7rem 0 3rem; /*----maybe change to 5rem */
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .underline {
+    height: 0.1rem;
+    width: 6rem;
   }
 
   .section-center {
-    display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
     text-align: center;
   }
+
   .section-info {
     width: 100%;
     margin-right: 0;
     margin-bottom: 5rem;
   }
 
-  .section-heading h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .underline {
-    height: 0.08rem;
-    width: 6rem;
-  }
-
   .section-info h3 {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-
-  .section-info p {
-    line-height: 1.5;
-    color: var(--clr-primary-blue-dark-1);
+    font-size: 1.125rem;
   }
 
   /*---------- Numbers -----------*/
@@ -765,21 +776,47 @@ h3 {
   }
   .numbers-card {
     flex: 0 0 47%;
-    padding: 1.5remrem 1.5rem;
-    border-radius: 25px;
     margin-bottom: 2rem;
+  }
+
+  .numbers-title {
+    font-size: 2.5rem;
   }
 
   /*---------- Slides -----------*/
   .section-slides {
-    margin: 10rem 0;
     flex-direction: column;
-    height: 70vh;
+    height: 80vh;
   }
 
   .slide-five,
   .slide-seven {
     display: none;
+  }
+
+  /*---------- Ski areas -----------*/
+  .areas-btn {
+    max-width: 30rem;
+    flex-wrap: wrap;
+    margin: 0 auto 2rem;
+  }
+
+  .filter-btn {
+    margin-bottom: 1rem;
+  }
+
+  .single-resort {
+    flex: 0 0 48%;
+  }
+
+  .resort-info h4 {
+    font-size: 1rem;
+    padding-top: 0.2rem;
+  }
+
+  .see-more {
+    font-size: 1rem;
+    padding: 1rem 0;
   }
 
   /*---------- Prices -----------*/
@@ -796,17 +833,22 @@ h3 {
     margin-top: 5rem;
   }
 
+  .prices-category h4 {
+    font-size: 1rem;
+  }
+
   .prices-category p {
     font-size: 1.2rem;
   }
 
   /*---------- Questions -----------*/
   .question-title {
-    padding: 0rem 0.25rem 0.2rem 0.75rem;
+    padding: 0rem 0.25rem 0.2rem 0.5rem;
   }
 
   .question-title p {
     font-size: 1rem;
+    text-align: left;
   }
 
   .question-btn {
@@ -815,11 +857,169 @@ h3 {
 
   .question-text {
     font-size: 0.875rem;
+    padding: 2rem 0.75rem 3rem 0.5rem;
   }
 
   /*---------- Contact -----------*/
   .section-contact {
     padding-top: 7rem;
-    padding-bottom: 2rem;
+  }
+
+  .contact-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info p {
+    font-size: 0.875rem;
+  }
+
+  .contact-container .contact-links {
+    font-size: 0.875rem;
+  }
+
+  /*---------- Contact -----------*/
+  .footer {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .footer-rights {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section {
+    padding: 0 1.5rem;
+  }
+
+  .section-heading {
+    margin: 5rem 0 3rem;
+  }
+
+  /*---------- Titel -----------*/
+  .title-center {
+    margin-top: 0rem;
+  }
+
+  .title-heading {
+    padding: 0 1rem;
+  }
+
+  .title-heading h1 {
+    font-size: 2rem;
+  }
+
+  .title-btn {
+    padding: 0.75rem 2.5rem;
+  }
+
+  /*---------- About -----------*/
+  .section-heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-info h3 {
+    font-size: 1rem;
+  }
+
+  .section-info p {
+    font-size: 0.875rem;
+  }
+
+  .section-card {
+    width: 80%;
+  }
+
+  /*---------- About -----------*/
+  .numbers-card {
+    flex: 0 0 48%;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+
+  .numbers-logo {
+    height: 35px;
+  }
+
+  .numbers-title {
+    font-size: 1.5rem;
+  }
+
+  .numbers-info {
+    font-size: 0.875rem;
+  }
+
+  /*---------- Slides -----------*/
+  .section-slides {
+    margin: 5rem 0;
+  }
+
+  /*---------- Ski areas -----------*/
+  .areas-btn {
+    margin: 0 auto 1rem;
+  }
+
+  .filter-btn {
+    margin-bottom: 0.7rem;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+    font-size: 0.75rem;
+    width: 6rem;
+  }
+
+  .resorts-container {
+    margin-bottom: 5rem;
+  }
+
+  .single-resort {
+    flex: 0 0 95%;
+    margin: 0 auto 1rem;
+  }
+
+  .resort-img {
+    height: 15rem;
+    object-fit: cover;
+  }
+
+  /*---------- Prices -----------*/
+  .prices-info {
+    font-size: 0.875rem;
+  }
+
+  .prices-categories {
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .prices-category {
+    width: 40%;
+  }
+
+  /*---------- Questions -----------*/
+  .question-title p {
+    font-size: 0.875rem;
+    padding-right: 2rem;
+  }
+
+  .question-text {
+    font-size: 0.75rem;
+  }
+
+  .section-contact {
+    padding-top: 3rem;
+  }
+
+  .contact-container h3,
+  .contact-container .contact-links {
+    display: none;
+  }
+}
+
+/*---------- 400px -----------*/
+@media screen and (max-width: 400px) {
+  .prices-category {
+    width: 100%;
   }
 }
