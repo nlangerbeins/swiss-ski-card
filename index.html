@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link rel="shortcut icon" href="./assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -74,15 +75,15 @@
             <h3>One skipass for all ski areas in Switzerland</h3>
             <p>
               Never seen before in Switzerland: With the Swiss Ski Card, up to
-              87 ski resorts with a total of up to 2,815 varied kilometers of
+              15 ski resorts with a total of up to 1036 varied kilometers of
               slopes are open to you - and that from the start in November to
-              sunny skiing in April! With more than 900 state-of-the-art cable
+              sunny skiing in April! With more than 549 state-of-the-art cable
               cars and lifts, you can quickly reach the starting points of your
-              skiing adventure, and around 800 huts and mountain restaurants
+              skiing adventure, and around 375 huts and mountain restaurants
               invite you to stop for a refreshment break. The Swiss Ski Card
               region is unique in its size and variety of offers: discover the
               endless possibilities on skis or snowboard, from glacier ski areas
-              to the longest valley runs. No less than 87 ski resorts offer
+              to the longest valley runs. No less than 15 ski resorts offer
               plenty of variety and always the perfect offer for your wishes and
               needs.
             </p>
@@ -103,7 +104,7 @@
               src="./assets/icons/mountain.svg"
               alt="mountain"
             />
-            <h2 class="numbers-title">15</h2>
+            <h2 class="numbers-title" id="number" data-value="15">0</h2>
             <h3 class="numbers-info">Ski resorts</h3>
           </div>
           <div class="numbers-card">
@@ -112,7 +113,7 @@
               src="./assets/icons/skier.svg"
               alt="mountain"
             />
-            <h2 class="numbers-title">876</h2>
+            <h2 class="numbers-title" id="number" data-value="1036">0</h2>
             <h3 class="numbers-info">Piste kilometres</h3>
           </div>
           <div class="numbers-card">
@@ -121,7 +122,7 @@
               src="./assets/icons/cable-car-cabin.svg"
               alt="mountain"
             />
-            <h2 class="numbers-title">358</h2>
+            <h2 class="numbers-title" id="number" data-value="549">0</h2>
             <h3 class="numbers-info">Ski lifts</h3>
           </div>
           <div class="numbers-card">
@@ -130,7 +131,7 @@
               src="./assets/icons/house.svg"
               alt="mountain"
             />
-            <h2 class="numbers-title">174</h2>
+            <h2 class="numbers-title" id="number" data-value="375">0</h2>
             <h3 class="numbers-info">Huts</h3>
           </div>
         </div>
@@ -139,16 +140,34 @@
 
       <!-- slides -->
       <section class="section-slides">
-        <div class="slide-one single-slide selected"></div>
-        <div class="slide-two single-slide selected"></div>
-        <div class="slide-three single-slide selected"></div>
-        <div class="slide-four single-slide selected"></div>
-        <div class="slide-five single-slide selected"></div>
-        <div class="slide-six single-slide selected"></div>
-        <div class="slide-seven single-slide selected"></div>
-        <div class="slide-two single-slide selected"></div>
-        <div class="slide-one single-slide selected"></div>
-        <div class="slide-four single-slide selected"></div>
+        <div class="slide-one single-slide selected">
+          <p class="slide-area">Bern</p>
+          <h4 class="slide-name">Niederhorn</h4>
+        </div>
+        <div class="slide-two single-slide">
+          <p class="slide-area">Wallis</p>
+          <h4 class="slide-name">Lauchernalp</h4>
+        </div>
+        <div class="slide-three single-slide">
+          <p class="slide-area">Vaud</p>
+          <h4 class="slide-name">Les Diablerets</h4>
+        </div>
+        <div class="slide-four single-slide">
+          <p class="slide-area">Freiburg</p>
+          <h4 class="slide-name">Les Paccots</h4>
+        </div>
+        <div class="slide-five single-slide">
+          <p class="slide-area">Wallis</p>
+          <h4 class="slide-name">Saas-Almagell</h4>
+        </div>
+        <div class="slide-six single-slide">
+          <p class="slide-area">Bern</p>
+          <h4 class="slide-name">Les Rochers-de-Naye</h4>
+        </div>
+        <div class="slide-seven single-slide">
+          <p class="slide-area">Vaud</p>
+          <h4 class="slide-name">Glacier 3000</h4>
+        </div>
       </section>
       <!-- end of slides -->
 

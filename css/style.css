@@ -279,15 +279,15 @@ h3 {
 .section-slides {
   margin: 7rem 0;
   display: flex;
-  background: grey;
 }
 
 .single-slide {
+  flex: 1;
   height: 50vh;
   border: 1px solid var(--clr-white);
-  flex: 1;
   background-size: cover;
-  background-position: right;
+  background-position: center;
+  position: relative;
 }
 
 .single-slide:first-of-type {
@@ -319,6 +319,42 @@ h3 {
 }
 .slide-seven {
   background-image: url(../assets/slides/7.jpg);
+}
+
+.slide-area {
+  display: inline-block;
+  font-size: 1.25rem;
+  color: var(--clr-white);
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background-color: var(--clr-primary-blue-dark-1);
+  opacity: 0;
+}
+
+.slide-name {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  background-color: var(--clr-primary-gold-light-1);
+  border: 2px solid var(--clr-primary-gold);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  opacity: 0;
+}
+
+.selected {
+  flex: 6;
+}
+
+.selected .slide-area,
+.selected .slide-name {
+  opacity: 1;
+}
+
+.selected .test {
+  opacity: 1;
 }
 
 /*---------- Ski areas -----------*/
@@ -896,6 +932,10 @@ h3 {
     margin: 5rem 0 3rem;
   }
 
+  .nav-links {
+    padding-top: 0;
+  }
+
   /*---------- Titel -----------*/
   .title-center {
     margin-top: 0rem;
@@ -1014,6 +1054,10 @@ h3 {
   .contact-container h3,
   .contact-container .contact-links {
     display: none;
+  }
+
+  .contact-email {
+    margin-bottom: 1rem;
   }
 }
 
