@@ -26,6 +26,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Lora', serif;
 }
@@ -58,6 +62,26 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   padding: 0 3rem;
+  padding-top: 6rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin: 2rem 0 5rem;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+  color: var(--clr-primary-blue);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.underline {
+  height: 0.125rem;
+  width: 8rem;
+  background-color: var(--clr-primary-gold);
+  margin: 0 auto;
 }
 
 /*---------- Header -----------*/
@@ -192,25 +216,6 @@ h3 {
 
 /*---------- About -----------*/
 
-.section-heading {
-  text-align: center;
-  margin: 7rem 0 5rem;
-}
-
-.section-heading h2 {
-  font-size: 2.5rem;
-  color: var(--clr-primary-blue);
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.underline {
-  height: 0.125rem;
-  width: 8rem;
-  background-color: var(--clr-primary-gold);
-  margin: 0 auto;
-}
-
 .section-center {
   display: flex;
   width: 100%;
@@ -242,7 +247,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 7rem 0;
+  margin: 3rem 0 0;
 }
 
 .numbers-card {
@@ -277,7 +282,7 @@ h3 {
 
 /*---------- Slides -----------*/
 .section-slides {
-  margin: 7rem 0;
+  margin: 9rem 0 0;
   display: flex;
 }
 
@@ -336,7 +341,7 @@ h3 {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: var(--clr-primary-gold-light-1);
   border: 2px solid var(--clr-primary-gold);
   padding: 0.5rem 1rem;
@@ -361,7 +366,7 @@ h3 {
 .resorts-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 7rem;
+  margin-bottom: 8rem;
   flex-wrap: wrap;
 }
 
@@ -442,11 +447,11 @@ h3 {
 /*---------- Prices -----------*/
 .section-prices {
   background: var(--clr-primary-blue);
-  padding: 7rem 0;
+  padding-bottom: 6rem;
 }
 
 .section-prices .section-heading {
-  margin: 0 0 3rem;
+  margin: 2rem 0 3rem;
 }
 
 .section-prices h2 {
@@ -667,12 +672,12 @@ h3 {
   }
 
   /*---------- Prices -----------*/
-  .section-prices {
+  /* .section-prices {
     padding: 7rem 0;
-  }
+  } */
 
   .section-prices .section-heading {
-    margin: 0 0 2.5rem;
+    margin: 2rem 0 2.5rem;
   }
 
   .prices-info {
@@ -689,6 +694,20 @@ h3 {
 }
 
 @media screen and (max-width: 776px) {
+  /*---------- Global -----------*/
+  .section-heading {
+    margin: 0 0 3rem;
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .underline {
+    height: 0.1rem;
+    width: 6rem;
+  }
+
   /*---------- Navbar -----------*/
   .navbar {
     padding: 2rem 1.5rem;
@@ -777,18 +796,6 @@ h3 {
   }
 
   /*---------- About -----------*/
-  .section-heading {
-    margin: 7rem 0 3rem; /*----maybe change to 5rem */
-  }
-
-  .section-heading h2 {
-    font-size: 2rem;
-  }
-
-  .underline {
-    height: 0.1rem;
-    width: 6rem;
-  }
 
   .section-center {
     flex-direction: column;
@@ -808,7 +815,7 @@ h3 {
 
   /*---------- Numbers -----------*/
   .numbers-container {
-    margin: 5rem 0;
+    margin: 3rem 0;
   }
   .numbers-card {
     flex: 0 0 47%;
@@ -823,11 +830,19 @@ h3 {
   .section-slides {
     flex-direction: column;
     height: 80vh;
+    margin: 5rem 0 0;
   }
 
-  .slide-five,
-  .slide-seven {
-    display: none;
+  .slide-area {
+    font-size: 1rem;
+  }
+
+  .slide-name {
+    font-size: 1rem;
+  }
+
+  .selected {
+    flex: 4;
   }
 
   /*---------- Ski areas -----------*/
@@ -845,6 +860,10 @@ h3 {
     flex: 0 0 48%;
   }
 
+  .resorts-container {
+    margin-bottom: 5rem;
+  }
+
   .resort-info h4 {
     font-size: 1rem;
     padding-top: 0.2rem;
@@ -856,10 +875,6 @@ h3 {
   }
 
   /*---------- Prices -----------*/
-  .section-prices {
-    padding: 5rem 0;
-  }
-
   .section-prices .section-heading {
     margin: 0 0 1.5rem;
   }
@@ -924,12 +939,9 @@ h3 {
 }
 
 @media screen and (max-width: 550px) {
+  /*---------- Global -----------*/
   .section {
-    padding: 0 1.5rem;
-  }
-
-  .section-heading {
-    margin: 5rem 0 3rem;
+    padding: 6rem 1.5rem 0;
   }
 
   .nav-links {
@@ -970,7 +982,11 @@ h3 {
     width: 80%;
   }
 
-  /*---------- About -----------*/
+  /*---------- Numbers -----------*/
+  .numbers-container {
+    margin: 0rem 0;
+  }
+
   .numbers-card {
     flex: 0 0 48%;
     padding: 1rem 0;
@@ -990,8 +1006,18 @@ h3 {
   }
 
   /*---------- Slides -----------*/
-  .section-slides {
-    margin: 5rem 0;
+  .single-slide {
+    height: 30vh;
+  }
+
+  .slide-area {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .slide-name {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
   }
 
   /*---------- Ski areas -----------*/
