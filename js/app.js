@@ -1,6 +1,7 @@
+import resorts from './data.js';
+
 // Numbers
 const items = [...document.querySelectorAll('#number')];
-console.log(items);
 
 const updateCount = (el) => {
   const value = parseInt(el.dataset.value);
@@ -30,7 +31,7 @@ slides.forEach((el) => {
     el.classList.add('selected');
   });
 
-  removeFocus = () => {
+  const removeFocus = () => {
     slides.forEach((item) => {
       item.classList.remove('selected');
     });
@@ -84,3 +85,72 @@ window.addEventListener('scroll', () => {
     document.querySelector('.nav-logo').classList.remove('logo-active');
   }
 });
+
+// Ski areas buttons
+
+const areasContainer = document.querySelector('.resorts-container');
+const btnAreas = document.querySelector('.areas-btn');
+
+// load items
+window.addEventListener('DOMContentLoaded', function () {
+  displaySkiResorts(resorts);
+  displayAreasButtons();
+});
+
+function displaySkiResorts(skiResorts) {
+  let displayResort = skiResorts.map((item) => {
+    return `<a href="" class="single-resort">
+            <img src=${item.img} alt=${item.title} class="resort-img" />
+            <div class="resort-info">
+              <p class="resort-area">${item.category}</p>
+              <h4>${item.title}</h4>
+              <p class="resort-date">${item.date}</p>
+            </div>
+            <button class="see-more">see more</button>
+          </a>`;
+  });
+  displayResort = displayResort.join('');
+
+  areasContainer.innerHTML = displayResort;
+}
+
+function displayAreasButtons() {
+  const areas = resorts.reduce(
+    function (values, item) {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ['all']
+  );
+
+  const categoryBtns = areas
+    .map((item) => {
+      return `<button class="filter-btn" type="button" data-id=${item}>${item}</button>`;
+    })
+    .join('');
+
+  btnAreas.innerHTML = categoryBtns;
+
+  // filter items
+  const filterBtns = btnAreas.querySelectorAll('.filter-btn');
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      const category = e.currentTarget.dataset.id;
+      const areasCategory = resorts.filter((item) => {
+        if (item.category === category) {
+          return item;
+        }
+      });
+
+      //   console.log(areasCategory);
+      if (category === 'all') {
+        displaySkiResorts(resorts);
+      } else {
+        displaySkiResorts(areasCategory);
+      }
+    });
+  });
+}

@@ -1,4 +1,4 @@
-const areas = [
+const resorts = [
   {
     id: 1,
     title: 'Niederhorn',
@@ -120,3 +120,5 @@ const areas = [
     desc: 'Welcome to Springenboden, your premier destination for winter excitement in Bern. Discover a winter wonderland with perfectly groomed slopes catering to all skill levels. Our modern facilities, family-friendly atmosphere, and après-ski delights make Springenboden the ideal escape. Experience the thrill of skiing, snowboarding, and a variety of winter activities amidst breathtaking alpine landscapes. Join us for an unforgettable blend of adventure, relaxation, and snowy enchantment.',
   },
 ];
+
+export default resorts;

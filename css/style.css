@@ -364,10 +364,10 @@ h3 {
 
 /*---------- Ski areas -----------*/
 .resorts-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
   margin-bottom: 8rem;
-  flex-wrap: wrap;
 }
 
 .areas-btn {
@@ -398,7 +398,6 @@ h3 {
 }
 
 .single-resort {
-  flex: 0 0 23.5%;
   border: 1px solid var(--clr-primary-gold);
   border-radius: 1.25rem;
   box-shadow: 0px 50px 97px 0px rgba(155, 155, 155, 0.39);
@@ -414,6 +413,8 @@ h3 {
 .resort-img {
   border-top-right-radius: 1.25rem;
   border-top-left-radius: 1.25rem;
+  height: 12rem;
+  object-fit: cover;
 }
 
 .resort-info {
@@ -664,11 +665,9 @@ h3 {
   }
 
   /*---------- Ski areas -----------*/
+
   .resorts-container {
-    justify-content: space-between; /*-----need to change that --------*/
-  }
-  .single-resort {
-    flex: 0 0 32%;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /*---------- Prices -----------*/
@@ -856,11 +855,8 @@ h3 {
     margin-bottom: 1rem;
   }
 
-  .single-resort {
-    flex: 0 0 48%;
-  }
-
   .resorts-container {
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 5rem;
   }
 
@@ -1035,15 +1031,11 @@ h3 {
 
   .resorts-container {
     margin-bottom: 5rem;
-  }
-
-  .single-resort {
-    flex: 0 0 95%;
-    margin: 0 auto 1rem;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .resort-img {
-    height: 15rem;
+    height: 10rem;
     object-fit: cover;
   }
 
