@@ -3,8 +3,11 @@
   position: fixed;
   top: 0;
   left: 0;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
   align-items: center;
   width: 100%;
   padding: 2rem 3rem;
@@ -14,8 +17,11 @@
 }
 
 .resort-navLogo {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
   align-items: center;
   width: 100%;
 }
@@ -36,6 +42,7 @@
   font-weight: 600;
   cursor: pointer;
   color: var(--clr-primary-blue-dark-1);
+  -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
@@ -50,13 +57,16 @@
   margin-left: auto;
   margin-right: auto;
   padding: 9rem 3rem;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: stretch;
   align-items: stretch;
 }
 
 .singleResort-img {
   width: 50%;
   border-radius: var(--radius);
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -117,7 +127,10 @@
 /*---------- Media queries -----------*/
 @media screen and (max-width: 1024px) {
   .singleResort-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
+    -webkit-box-align: center;
     align-items: center;
     text-align: center;
     max-width: 50rem;

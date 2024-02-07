@@ -75,7 +75,7 @@ document.querySelector('.nav-logo').addEventListener('click', () => {
 
 // Header Background change on scroll
 window.addEventListener('scroll', () => {
-  if (window.scrollY >= window.innerHeight - 700) {
+  if (window.scrollY >= window.innerHeight - 500) {
     document.querySelector('.navbar').classList.add('active');
     document.querySelector('.nav-logo').classList.add('logo-active');
   } else {
