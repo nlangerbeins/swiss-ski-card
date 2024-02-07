@@ -446,6 +446,7 @@ h3 {
   font-weight: 700;
   font-size: 1.125rem;
   cursor: pointer;
+  color: var(--clr-primary-blue-dark-1);
 }
 
 /*---------- Prices -----------*/
