@@ -1089,3 +1089,10 @@ h3 {
     width: 100%;
   }
 }
+
+/*---------- 550px height -----------*/
+@media all and (max-height: 550px) and (orientation: landscape) {
+  .section-slides {
+    display: none;
+  }
+}
