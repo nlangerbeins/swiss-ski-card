@@ -1092,6 +1092,13 @@ h3 {
 
 /*---------- 550px height -----------*/
 @media all and (max-height: 550px) and (orientation: landscape) {
+  .nav-links {
+    padding-top: 0;
+  }
+  .nav-item {
+    padding: 1rem 1.5rem 0;
+  }
+
   .section-slides {
     display: none;
   }
